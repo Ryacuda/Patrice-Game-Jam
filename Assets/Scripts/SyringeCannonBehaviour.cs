@@ -12,6 +12,7 @@ public class SyringeCannonBehaviour : MonoBehaviour
 	int currentAmmo;
     CannonBehaviour CBComponent;
 	Sprite ammoSprite;
+	List<GameObject> ammoList;
 
 
 	// Start is called before the first frame update
@@ -20,6 +21,23 @@ public class SyringeCannonBehaviour : MonoBehaviour
 		CBComponent = GetComponent<CannonBehaviour>();
 
 		currentAmmo = maxAmmo;
+
+		ammoSprite = projectile.transform.Find("Sprite").GetComponent<SpriteRenderer>().sprite;
+
+		ammoList = new List<GameObject>();
+		for(int i = 0; i < maxAmmo; i++)
+		{
+			GameObject go = new GameObject();
+			go.transform.parent = transform.Find("Barrel");
+			go.transform.localScale = 0.3f * Vector3.one;
+			go.transform.localPosition = new Vector3(-0.6f + (float)i * 1.4f / maxAmmo, 0f, 0f); 
+			go.name = "ammo_" + i;
+
+			SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
+			sr.sprite = ammoSprite;
+
+			ammoList.Add(go);
+		}
     }
 
 	// Update is called once per frame
@@ -47,7 +65,8 @@ public class SyringeCannonBehaviour : MonoBehaviour
 
 		// update display
 		transform.Find("Barrel/Piston").Translate(new Vector3(0.7f / (float)maxAmmo, 0f, 0f));
-
+		Destroy(ammoList[0]);
+		ammoList.RemoveAt(0);
 	}
 
 	private void OnDrawGizmos()

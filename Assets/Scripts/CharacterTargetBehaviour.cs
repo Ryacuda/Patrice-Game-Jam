@@ -54,21 +54,29 @@ public class CharacterTargetBehaviour : MonoBehaviour
     private IEnumerator StatIncreaseFX(Color color)
     {
         float elapsed_time = 0.0f;
-        Vector3 intial_scale = spriteTransform.localScale;
-        // bouncy
+        // bouncy & color flash
         while (elapsed_time < FXDuration)
         {
             float x = elapsed_time * Mathf.PI * 3 / FXDuration;
-            Debug.Log(x);
-            spriteTransform.localScale = ( 1 + (scaleFactor * (2 * Mathf.Sin(x / 3) + Mathf.Sin(x)))) * Vector3.one;
+            float f = scaleFactor * (2 * Mathf.Sin(x / 3) + Mathf.Sin(x));
+
+			spriteTransform.localScale = (1 + f) * Vector3.one;
+            spriteTransform.gameObject.GetComponent<SpriteRenderer>().material.color = Color.white + 3 * new Color(f * color.r, f* color.g, f*color.b) ;
+
 			elapsed_time += Time.deltaTime;
 
 			yield return null;
         }
 
         // reset scale to starting scale
-        spriteTransform.localScale = intial_scale;
+        spriteTransform.localScale = Vector3.one;
+		spriteTransform.gameObject.GetComponent<SpriteRenderer>().material.color = Color.white;
 
-        yield return null;
+		yield return null;
     }
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		
+	}
 }

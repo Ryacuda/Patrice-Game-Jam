@@ -48,17 +48,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6346799263252536955, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 2ed3c77c65bd1924086ef17b28a5529b, type: 2}
+    - target: {fileID: 7681910626463209010, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681910626463209010, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 2ed3c77c65bd1924086ef17b28a5529b, type: 2}
     - target: {fileID: 8585211970297585176, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Name
       value: Cyclop
       objectReference: {fileID: 0}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b8846e69ae523cc49b832a4553c89f0e, type: 3}
+    - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Color.b
-      value: 0.17647058
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Color.g
-      value: 0.57732993
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Color.r

@@ -13,7 +13,8 @@ public class ChromosomeProjBehaviour : MonoBehaviour
 	void Start()
     {
         rotationSpeed = 2 + Random.value * 8;       // rot speed [2, 10]
-    }
+		Destroy(gameObject, 10);                    // destroy after 10s
+	}
 
     // Update is called once per frame
     void Update()

@@ -8,10 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6647916327131865086, guid: b02a090305ddb4240819f41a53cc987c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 87e45d69eb17b57448430b273b18dbcc, type: 2}
+    - target: {fileID: -2560416359142462023, guid: b02a090305ddb4240819f41a53cc987c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 87e45d69eb17b57448430b273b18dbcc, type: 2}
+    - target: {fileID: 2187655150690735796, guid: b02a090305ddb4240819f41a53cc987c, type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187655150690735796, guid: b02a090305ddb4240819f41a53cc987c, type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
     - target: {fileID: 2187655150690735796, guid: b02a090305ddb4240819f41a53cc987c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3742a818e1691144b88ce1000d9b1fa5, type: 3}
+      objectReference: {fileID: 21300000, guid: b3316198848692b4aa17c825b4ab003c, type: 3}
+    - target: {fileID: 2187655150690735796, guid: b02a090305ddb4240819f41a53cc987c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4052152040439247937, guid: b02a090305ddb4240819f41a53cc987c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -81,3 +101,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a03942d4469ed40a4e3264c7cdb6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chromType: 0

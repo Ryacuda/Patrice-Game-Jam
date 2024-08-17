@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 11e6cc06c8f0fd243a96deeff1728f5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,11 +103,15 @@ PrefabInstance:
     - target: {fileID: 2417703950777358917, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5cd385fb08905bf46902a409b209aad6, type: 3}
+      objectReference: {fileID: 21300000, guid: 1d063be8fcd620d47abf0b5d3bf89086, type: 3}
     - target: {fileID: 2417703950777358917, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2417703950777358917, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11e6cc06c8f0fd243a96deeff1728f5d, type: 2}
     - target: {fileID: 3725838329257859072, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -199,7 +203,7 @@ MonoBehaviour:
   projectile: {fileID: 8296273759209603586, guid: 12c57e383765b9d4ca48da130d06c895, type: 3}
   shootStartDistance: 1.06
   cannonPower: 10
-  maxAmmo: 2
+  maxAmmo: 5
 --- !u!4 &4535960155352994379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6558544953154392523, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
