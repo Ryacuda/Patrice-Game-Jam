@@ -65,9 +65,17 @@ PrefabInstance:
       value: Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0e83ec15f466cb845afd164b0e971143, type: 3}
+      objectReference: {fileID: 21300000, guid: fd4d2d35525f25e419dffd18ad98c5da, type: 3}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -78,6 +86,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

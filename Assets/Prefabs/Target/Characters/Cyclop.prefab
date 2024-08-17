@@ -65,9 +65,17 @@ PrefabInstance:
       value: Cyclop
       objectReference: {fileID: 0}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b8846e69ae523cc49b832a4553c89f0e, type: 3}
+      objectReference: {fileID: 21300000, guid: 3b78da3c7d9699148ae11590d5e8f373, type: 3}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -78,6 +86,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199692287945607380, guid: 30fd7b1a469301142b195aebf3c36df7, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

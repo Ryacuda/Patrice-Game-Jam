@@ -6,6 +6,7 @@ public enum ChromosomeType { Creativity, Intelligence, Strength };
 
 public class ChromosomeProjBehaviour : MonoBehaviour
 {
+    public static int chromosomeCount;
     public ChromosomeType chromType;
     float rotationSpeed;                    // rotation speed in rad per second
 
@@ -13,7 +14,15 @@ public class ChromosomeProjBehaviour : MonoBehaviour
 	void Start()
     {
         rotationSpeed = 2 + Random.value * 8;       // rot speed [2, 10]
-		Destroy(gameObject, 10);                    // destroy after 10s
+        if(Random.value > 0)
+        {
+            rotationSpeed *= -1;
+        }
+
+		Destroy(gameObject, 5);                    // destroy after 10s
+        chromosomeCount++;
+		LevelOneGameManager gm = FindObjectOfType<LevelOneGameManager>();
+		gm.gameResolved = false;
 	}
 
     // Update is called once per frame
@@ -31,5 +40,16 @@ public class ChromosomeProjBehaviour : MonoBehaviour
             hitChar.IncrementStat(chromType);
             Destroy(gameObject);
         }
+	}
+
+	private void OnDestroy()
+	{
+		chromosomeCount--;
+        if( chromosomeCount == 0 )
+        {
+			LevelOneGameManager gm = FindObjectOfType<LevelOneGameManager>();
+			gm.gameResolved = true;
+			gm.TryEndgameUI();
+		}
 	}
 }
