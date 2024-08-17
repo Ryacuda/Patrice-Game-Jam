@@ -8,17 +8,20 @@ public class SyringeCannonBehaviour : MonoBehaviour
     public float shootStartDistance;
     public float cannonPower;
 	public int maxAmmo;
+	public bool mute;
 
 	int currentAmmo;
     CannonBehaviour CBComponent;
 	Sprite ammoSprite;
 	List<GameObject> ammoList;
+	LevelOneAudioManager audioManager;
 
 
 	// Start is called before the first frame update
 	void Start()
     {
 		CBComponent = GetComponent<CannonBehaviour>();
+		audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<LevelOneAudioManager>();
 
 		currentAmmo = maxAmmo;
 
@@ -55,10 +58,11 @@ public class SyringeCannonBehaviour : MonoBehaviour
 										Mathf.Sin(CBComponent.barrelAngle),
 										0);
 
-		// create a projectile
+		// create a projectile and play SFX
 		GameObject proj = Instantiate(projectile, transform.position + shootStartDistance * shoot_dir, Quaternion.identity);
 		proj.transform.localScale *= 0.66f;
 		proj.GetComponent<Rigidbody2D>().velocity = cannonPower * shoot_dir;
+		if(!mute) audioManager.PlayShotSFX();
 
 		// expand ammo
 		currentAmmo--;
@@ -69,10 +73,12 @@ public class SyringeCannonBehaviour : MonoBehaviour
 		ammoList.RemoveAt(0);
 	}
 
+	/*
 	private void OnDrawGizmos()
 	{
 		// gizmo cannon direction
 		Gizmos.color = Color.red;
 		Gizmos.DrawSphere(transform.position + shootStartDistance *  Vector3.right, 0.05f);
 	}
+	*/
 }
