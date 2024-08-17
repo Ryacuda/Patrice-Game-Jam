@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6658646741832244960}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93,9 +93,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2417703950777358917, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417703950777358917, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417703950777358917, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 36888ea1dd6f8434f88da8c1b84bcf02, type: 3}
+      objectReference: {fileID: 21300000, guid: 5cd385fb08905bf46902a409b209aad6, type: 3}
+    - target: {fileID: 2417703950777358917, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3725838329257859072, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -162,8 +174,32 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6558544953154392523, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1829360815008297736}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5820443421970085257, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8163258857003227981}
   m_SourcePrefab: {fileID: 100100000, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
+--- !u!1 &3832572268616087049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5820443421970085257, guid: 1703337459d9cce499486193e5ff6b18, type: 3}
+  m_PrefabInstance: {fileID: 7347154779922416512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8163258857003227981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3832572268616087049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25977abf29fed6f44a31b8ec935efa69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 8296273759209603586, guid: 12c57e383765b9d4ca48da130d06c895, type: 3}
+  shootStartDistance: 1.06
+  cannonPower: 10
+  maxAmmo: 2
 --- !u!4 &4535960155352994379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6558544953154392523, guid: 1703337459d9cce499486193e5ff6b18, type: 3}

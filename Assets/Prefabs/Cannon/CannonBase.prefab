@@ -178,7 +178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6250163568550136005}
   - component: {fileID: 6456544360106542093}
-  - component: {fileID: 4527157766497593763}
   m_Layer: 0
   m_Name: CannonBase
   m_TagString: Untagged
@@ -216,17 +215,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrelAngle: 0
---- !u!114 &4527157766497593763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5820443421970085257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25977abf29fed6f44a31b8ec935efa69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 4580539281262831640, guid: b02a090305ddb4240819f41a53cc987c, type: 3}
-  shootStartDistance: 0
