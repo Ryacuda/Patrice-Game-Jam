@@ -11,14 +11,19 @@ public class CannonSingleShot : MonoBehaviour
     CannonBehaviour CBComponent;
 
 
-    // Start is called before the first frame update
-    void Start()
+	private void Awake()
+	{
+		CBComponent = GetComponent<CannonBehaviour>();
+	}
+
+	// Start is called before the first frame update
+	void Start()
     {
-        CBComponent = GetComponent<CannonBehaviour>();
+       
     }
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
 		if (Input.GetMouseButtonDown(0))
         {   // shoot
@@ -30,5 +35,13 @@ public class CannonSingleShot : MonoBehaviour
 
             proj.GetComponent<Rigidbody2D>().velocity = cannonPower * shoot_dir;
         }
+	}
+
+
+	private void OnDrawGizmos()
+	{
+		// gizmo cannon direction
+		Gizmos.color = Color.red;
+		Gizmos.DrawSphere(transform.position + shootStartDistance *  Vector3.right, 0.05f);
 	}
 }

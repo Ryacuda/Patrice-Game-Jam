@@ -31,11 +31,4 @@ public class CannonBehaviour : MonoBehaviour
 			barrelTransform.rotation = Quaternion.Euler(0f, 0f, barrelAngle * 180 / Mathf.PI);
 		}
 	}
-
-	private void OnDrawGizmos()
-	{
-		// gizmo cannon direction
-		Gizmos.color = Color.red;
-		Gizmos.DrawLine(transform.position, transform.position + new Vector3(Mathf.Cos(barrelAngle), Mathf.Sin(barrelAngle), 0));
-	}
 }
